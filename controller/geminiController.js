@@ -21,7 +21,7 @@ const getRecipe = async (req, res) => {
 
     } catch (error) {
         console.error('this is error block', error)
-        res.json(errorResponse(text, 'Please contact Administrator'))
+        res.json(errorResponse(text, 'Please contact Administrator'),500)
     }
    
 }
