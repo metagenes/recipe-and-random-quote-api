@@ -1,16 +1,10 @@
+const successResponse = require('../responder/successResponse')
+
 const ping = (req, res) => {
-    res.json({
-        status:"OK",
-        message: "Ping!",
-        timestamp: new Date().toISOString()
-    })
+    res.json(successResponse(null, 'Ping!'))
 }
 const pong = (req, res) => {
-    res.json({
-        status:"OK",
-        message: "Pong!",
-        timestamp: new Date().toISOString()
-    })
+    res.json(successResponse(null, 'Pong!'))
 }
 
 module.exports = { ping,pong }
