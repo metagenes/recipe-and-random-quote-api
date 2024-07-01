@@ -16,8 +16,6 @@ const getRecipe = async (req, res) => {
         const response = await result.response;
         const text = response.text();
 
-        // UOB06@047000
-
         // return response
         res.json({
             status:"OK",
