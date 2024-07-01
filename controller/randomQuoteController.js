@@ -11,10 +11,10 @@ const getData = async (req, res) => {
         const randomQuote = apiData.quotes[randomIndex];
 
         // return response
-        res.json(successResponse(`${randomQuote.quote} - ${randomQuote.author}`))
+        res.json(successResponse(`${randomQuote.quote} - ${randomQuote.author}`, 'Get Random Quotes Success'))
     } catch (error) {
         console.error('this is error block', error)
-        res.json(errorResponse(null, 'Please contact Administrator'))
+        res.json(errorResponse(null, 'Please contact Administrator'),500)
     }
    
 }
